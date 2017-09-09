@@ -9,9 +9,7 @@ public class Split {
 	private static boolean DEBUG = true;
 
 	static void printusage() {
-		printf("Split for %s %s\n", "Java", "1.0");
-		printf("(c)1997-2000 Henk Hagedoorn\n");
-		printf("(c)1997-2000 %s version Rhesa Rozendaal\n\n", "Java");
+		printf("Split for %s %s\n", "Java", "");
 		printf("usage: %s\n", "java Split [ -c | -j | -s[size] | -? ] filename [outputpath]");
 		printf("\ncommands:\n-j\t\tjoin files filename.001, filename.002... into filename\n");
 		printf("-s[size]\tsplit filename in filename.001, filename.002...\n");
@@ -20,11 +18,6 @@ public class Split {
 		printf("-?\t\thelp (this text)\n");
 		printf("[outputpath]\twhere Split should write it's output. If you do not\n");
 		printf("\t\tspecify this, output goes to the current directory.\n");
-		printf("\nFor more information, updates, versions for other OSs etc.\n");
-		printf("visit us at \n\t\thttp://www.freebyte.com\n");
-		printf("or contact us by email:\n");
-		printf("\t\tHenk Hagedoorn <hjh@usa.net>\n");
-		printf("\t\tRhesa Rozendaal <rhesa@usa.net>\n");
 	}
 	static int join(String s, String s1) {
 		int i = 0x10000;
@@ -145,10 +138,7 @@ public class Split {
 		return k;
 	}
 	static void info() {
-		printf("Version:\t%s\n", "1.0");
-		printf("Compile Date:\t%s\n", "11-3-00");
-		printf("Compiler:\t%s\n", "Microsoft (R) Visual J++ Compiler Version 6.00.8424");
-		printf("Os:\t\t%s\n", "Java");
+		printf("Version:\t%s\n", "1.1");
 	}
 	static String replace(String s, String s1, String s2) {
 		return replace(s, s1, s2, true);
@@ -380,7 +370,7 @@ public class Split {
 		printf("Done!\n\n");
 		printf("bytes read: %s\nbytes written: %s\n", String.valueOf(i1), String.valueOf(j1));
 		printf("parts created: %s\n", "" + j);
-		printf("time used: %s.%s sec.\n", String.valueOf(l1 / 1000L), String.valueOf(l1 % 1000L));
+		printf("time taken: %s.%s sec.\n", String.valueOf(l1 / 1000L), String.valueOf(l1 % 1000L));
 		return 0;
 	}
 }
